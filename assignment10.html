@@ -1,0 +1,205 @@
+<html>
+  <center>
+    <head>
+    <h1>ALMOST THE LAST ONE</h1>
+    <style>
+      .backbutton{
+        background-color: #D2F2D0;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .fwdbutton{
+        background-color: #F5FFB2;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .hostbutton{
+        background-color: #CEEDF9;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .locationbutton{
+        background-color: #E3DAF9;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .protocolbutton{
+        background-color: #F2D0E1;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .windowSize{
+        background-color: #C3AAC9;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .openWindow{
+        background-color: #CB8296;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .resizeWindow{
+        background-color: #99CBAE;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+      .timerbutton{
+        background-color: #9FBCDB;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display:inline-block;
+        font-size: 14 px;
+        margin: 4px 2px;
+        curser: pointer;
+      }
+    </style>
+   <!-- Back Button-->
+    <script>
+      function goBack(){
+        window.history.back()
+      }
+    </script>
+  <!--Forward Button-->
+    <script>
+      function goForward(){
+        window.history.forward()
+      }
+    </script>
+  <!--Host Button-->
+    <p id ="Host"></p>
+    <script>
+      function getHost(){
+      document.getElementById("Host").innerHTML =
+      "The Host Name is:<br>" + window.location.hostname;
+    }
+    </script>
+  <!--Location Button-->
+    <p id ="myLocation"></p>
+    <script>
+      function getLocation(){
+      document.getElementById("myLocation").innerHTML =
+      "The URL is:<br>" + window.location.href;
+    }
+    </script>
+  <!--Protocol Button-->
+    <p id ="Protocol"></p>
+    <script>
+    function getPro(){
+      document.getElementById("Protocol").innerHTML = window.location.protocol;
+    }
+    </script>
+  <!--Window Size Button-->
+    <p id ="windowSize"></p>
+    <script>
+      function windowSize(){
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        document.getElementById("windowSize").innerHTML = "Width: " + w + "<br>Height: " + h;
+      }
+    </script>
+  <!--Open/Resize Window Button-->
+    <script>
+      var myWindow;
+      var myWindow;
+      function openWindow(){
+        myWindow = window.open("", "", "width=250", "height=250")
+      }
+      function resizeWindow(){
+        myWindow.resizeTo(800,600);
+        myWindow.focus();
+      }
+    </script>
+  <!--Timer Button-->
+    <script>
+      function goBack(){
+        window.history.back()
+      }
+    </script>
+</head>
+  <body>
+    <body background = "images/blue2.jpg">
+    <table>
+      <tr>
+        <td><img src= "images/us.jpg" height = "500" width = "350"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><input type="button" class="backbutton" value="Back" onClick="goBack()"></td>
+        <td><input type="button" class="fwdbutton" value="Forward" onClick="goForward()"></td>
+        <td><input type="button" class="hostbutton" value="Host" onClick="getHost()"></td>
+        <td><input type="button" class="locationbutton" value="Location" onClick="getLocation()"></td>
+        <td><input type="button" class="protocolbutton" value="Protocol" onClick="getPro()"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td><input type="button" class="windowSize" value="Window Size" onClick="windowSize()"></td>
+        <td><input type="button" class="openWindow" value="Open New Window" onClick="openWindow()"></td>
+        <td><input type="button" class="resizeWindow" value="Resize New Window" onClick="resizeWindow()"></td>
+        <!--<button onclick="setTimeout(goBack, 3000);"> Click Here</button>-->
+        <td><input type="button" class="timerbutton" value="Timer" onclick="setTimeout(goBack, 3000);"></td>
+      </tr>
+      </table>
+    </body>
+  </center>
+</html>
